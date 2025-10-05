@@ -1,0 +1,19 @@
+name: Demo Action with Email
+   
+   on:
+     push:
+       branches: [ main, master ]
+     workflow_dispatch:  # Allows manual triggering
+   
+   jobs:
+     test:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v3
+           
+         - name: 23f1003076@ds.study.iitm.ac.in
+           run: echo "Hello, world! This step contains my email."
+           
+         - name: Complete workflow
+           run: echo "Workflow completed successfully!"
